@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <h1>Hello I am footer</h1>
+        <h4>Hello I am footer</h4>
     )
 }
 export default Footer;
