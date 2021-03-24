@@ -15,9 +15,10 @@ const HomePage = () => {
       return (
       <div key={index}>
       <div>
+        <h1>Hello</h1>
         <h1>{"Folder Name: " + item.metadata["title"]}</h1>
         <h2>{"File Count: " + item.fileCount}</h2>
-        <h2>{"url" + item.thumbnail.importUrl}</h2>
+        <img src={item.thumbnail.importUrl} />
       </div>
       <Link to={`/folder/${index + 1}`}>FOLDER</Link>
     </div>
