@@ -51,37 +51,32 @@ const FolderPage = ({ match }) => {
 
   return (
     <>
+    <Link to="/">Back to Homepage</Link>
     {folderItems.map((file, index) => {
       return (
         <div key={index}>
           {console.log("Hello look for me", file.asset)}
-          <div className="file-table">
-          <tbody>
+          <table id="file-table">
             <tr>
-              <th>Thumbnail</th>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Created Date</th>
-              <th>Modified Date</th>
-              <th>Modified By</th>
-              <th>View</th>
+              <td>Thumbnail</td>
+              <td>Title</td>
+              <td>Description</td>
+              <td>Created Date</td>
+              <td>Modified Date</td>
+              <td>Modified By</td>
+              <td>View</td>
             </tr>
             <tr>
-              <th>Empty for now</th>
-              <th>{file.asset.filename}</th>
-              <th>Empty for now</th>
-              <th>{file.asset.created}</th>
-              <th>Empty for now</th>
-              <th>Empty for now</th>
-              <th><Link to={`/folder/${folderId}/items/${index}`}>VIEW FILE</Link></th>
+              <td><iframe src={file.asset.url} className="file-photo"/></td>
+              <td>{file.asset.filename}</td>
+              <td>Empty for now</td>
+              <td>{file.asset.created}</td>
+              <td>Empty for now</td>
+              <td>Empty for now</td>
+              <td><Link to={`/folder/${folderId}/items/${index}`}>VIEW FILE</Link></td>
             </tr>
-            {/* <h1>Item</h1>
-            <h1>{"Item Name: " + file.asset.filename}</h1> */}
-            {/* <Link to={`/folder/${folderId}/items/${index}`}>VIEW FILE</Link> */}
-          </tbody>
+          </table>
           </div>
-
-        </div>
       )
     })}
       <Link to="/">Back to Homepage</Link>
