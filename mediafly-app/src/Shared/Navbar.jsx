@@ -1,19 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
-    return (
+    return (     
         <nav>
-            <h1>Hello it me nav</h1>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/folder/`${:folderId}`">Folders</Link>
+            <NavLink to="/folder/:folderId">Folders</NavLink>
           </li>
           <li>
-            <Link to="/item/`${:itemId}`">Items</Link>
+            <NavLink to="folder/:folderId/item/:itemId">Items</NavLink>
           </li>
         </ul>
       </nav>

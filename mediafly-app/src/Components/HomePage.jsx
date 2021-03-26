@@ -1,31 +1,34 @@
 import React, { Link } from 'react'
 import Data from '../data.json'
-// import Header from '../Shared/Header'
-// import Navbar from '../Shared/Navbar'
-// import Footer from '../Shared/Footer'
+// // import Header from '../Shared/Header'
+// // import Navbar from '../Shared/Navbar'
+// // import Footer from '../Shared/Footer'
+
+// export default class HomePage extends React.Component {
 
 
-const HomePage = () => {
-  let data = Data.response.items;
-  console.log(data)
+//       render() {
+//         let data = Data.response.items;
+//         console.log(data)
+//         return (
+//             <div className="folder-container">
+//             {data.map((item, index) => {
+//               return (
+//               <div key={index}>
+//               <div className="single-folder">
+//                 <h1 className="folder-header">{"Folder: " + item.metadata["title"]}</h1>
+//                 <Link to={`/folder/${index + 1}`}><img className="folder-img" src={item.thumbnail.url}/></Link>
+//                 <h2>{"Item Count: " + item.itemCount}</h2>
+//                 <Link to={`/folder/${index + 1}`}>GET INTO FOLDER</Link>
+//               </div>
+//             </div>
+//             )
+//           })} 
+//             </div>
+//           )
+//       }   
+    
+//   }
+//   export default HomePage;
 
-  return (
-    <>
-    {data.map((item, index) => {
-      return (
-      <div key={index}>
-      <div>
-        <h1>Hello</h1>
-        <h1>{"Folder Name: " + item.metadata["title"]}</h1>
-        <h2>{"File Count: " + item.fileCount}</h2>
-        <img src={item.thumbnail.importUrl} />
-      </div>
-      <Link to={`/folder/${index + 1}`}>FOLDER</Link>
-    </div>
-    )
-  })} 
-    </>
-  )
-}
 
-export default HomePage;
