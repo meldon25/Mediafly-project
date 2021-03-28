@@ -1,0 +1,144 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.nav-flex {
+  display: flex;
+}
+
+.folder-header {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.folder-img {
+  max-width: 265px;
+  height: auto;
+  width: fit-content;
+}
+
+.folder-container {
+  margin: 0;
+  padding: 50px 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.folder-button {
+  background-color: #3096b4;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.folder-button-text {
+  text-decoration: none;
+  color: white;
+}
+
+.single-folder {
+  margin: 30px 0px 30px 40px;
+  max-width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color:white 0.7;
+  box-shadow: 3px 3px 10px 2px rgb(65, 65, 65);
+}
+
+.item-count {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.item-count-and-folder {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 10px;
+}
+
+#background {
+  background: linear-gradient(to right, #25c481, #25b7c4);
+}
+
+
+.file-photo {
+  width: 200px;
+}
+
+.file-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+
+#file-table {
+  border-collapse: collapse;
+  width: 100%;
+  /* min-width: auto; */
+  table-layout: fixed;
+}
+
+
+#file-table > tr > td {
+  border: 1px solid #bbb;
+  padding: 15px;
+}
+
+#file-table tr:nth-child(even) {
+  background-color: #dfdfdf;
+}
+#file-table tr:hover:nth-child(even) {
+  background-color: rgb(244, 244, 244);
+}
+
+#file-table > td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
+.file-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+
+.file-data-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#file-thumbnail {
+  width: 150px;
+}
+
+.item-header {
+  margin-left: 16.3%;
+}
+
+.item-video {
+  margin-top: 40px;
+}
+
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+
+

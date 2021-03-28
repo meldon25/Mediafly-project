@@ -1,45 +1,27 @@
-// import React, { Link } from 'react'
-// import Data from '../data.json'
-// import Navbar from '../Shared/Navbar'
-// import Footer from '../Shared/Footer'
+import React, { Link } from 'react'
+import Data from '../data.json'
 
-// class ItemPage extends React.Component {
-//     render() {
-//         const {
-//             params: { folderId },
-//         } = match;
-    
-//         console.log(folderId);
-//     }
 
-//     getData() {
-//         fetch('/data.json'
-//         ,{
-//           headers : { 
-//             'Content-Type': 'application/json',
-//             'Accept': 'application/json'
-//            }
-//         }
-//         )
-//           .then(function(res){
-//             console.log(res)
-//             return res.json();
-//           })
-//           .then(function(myJson) {
-//             console.log(myJson);
-//           });
-//       }
-//       useEffect(()=>{
-//         getData()
-//       },[])
-
+// export default function ItemPage({ match }) {
+//     const {
+//         params: { folderId, itemId },
+//     } = match;
+  
+//     let data = Data.response.items;
+//     let file = data[folderId].items[itemId];
+  
 //         return (
 //             <>
-//             <h1>{"folder id:    " + folderId}</h1>
-//             <h2>{"File Count: " + data[folderId].fileCount}</h2>
-
-//             <Link to="/">Back to homepage</Link>
+//             {console.log(file)}
+//             <h3>{"Item: " + file.metadata['title']}</h3>
+//             <object data={file.thumbnail['url']} className="item-img"></object>
+//             <p>{"Created Date:" + file.created}</p>
+//             <p>{"Modified Date:" + file.modified}</p>
+//             <p>{"Modified By:" + file.modifiedBy}</p>
+  
+  
+//             <Link to={`/folder/${folderId}`}>Back To Folder</Link>
+//             <Link to="/">Back to Homepage</Link>
 //             </>
 //         )
 //     }
-// export default ItemPage;
