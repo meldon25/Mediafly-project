@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <h4>Hello I am footer</h4>
+        <>
+        <p>2021 My SalesKit</p>
+        </>
     )
 }
 export default Footer;

@@ -4,31 +4,30 @@ import Data from '../data.json'
 // // import Navbar from '../Shared/Navbar'
 // // import Footer from '../Shared/Footer'
 
-// export default class HomePage extends React.Component {
-
-
-//       render() {
-//         let data = Data.response.items;
-//         console.log(data)
-//         return (
-//             <div className="folder-container">
-//             {data.map((item, index) => {
-//               return (
+// export default function HomePage = ({ children }) => {
+//     let folders = Data.response.items;
+  
+//     return (
+//       <>
+//         <div className="folder-container" id="background">
+//           {folders.map((folder, index) => {
+//             return (
 //               <div key={index}>
-//               <div className="single-folder">
-//                 <h1 className="folder-header">{"Folder: " + item.metadata["title"]}</h1>
-//                 <Link to={`/folder/${index + 1}`}><img className="folder-img" src={item.thumbnail.url}/></Link>
-//                 <h2>{"Item Count: " + item.itemCount}</h2>
-//                 <Link to={`/folder/${index + 1}`}>GET INTO FOLDER</Link>
+//                   <div>{children}</div>
+//                 <div className="single-folder">
+//                   <h1 className="folder-header">{folder.metadata["title"]}</h1>
+//                   <Link to={`/folder/${index + 1}`}><img className="folder-img" src={folder.thumbnail.url} /></Link>
+//                   <div className="item-count-and-folder">
+//                     <p className="item-count">{"Item Count: " + folder.fileCount}</p>
+//                     <button className="folder-button"><Link to={`/folder/${index + 1}`} className="folder-button-text">Open Folder</Link></button>
+//                   </div>
+//                 </div>
 //               </div>
-//             </div>
 //             )
-//           })} 
-//             </div>
-//           )
-//       }   
-    
+//           })}
+//         </div>
+//       </>
+//     )
 //   }
-//   export default HomePage;
 
 
