@@ -1,0 +1,10 @@
+.header-container {
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    width: 130px;
+    height: auto;
+}
