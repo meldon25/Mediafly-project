@@ -6,5 +6,5 @@
 
 .header-logo {
     max-width: 130px;
-    height: auto;
+    max-height: 130px;
 }
