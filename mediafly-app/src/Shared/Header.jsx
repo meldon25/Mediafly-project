@@ -1,9 +1,12 @@
 import React from 'react'
+import '../Style/Header.css'
 
 
 function Header() {
     return (
-        <h1>Hello I am header</h1>
+        <div className="header-container">
+        <img className="header-logo" src="./logo-saleskit.png" src="../logo-saleskit.png" />
+        </div>
     )
 }
 export default Header;

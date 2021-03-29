@@ -7402,7 +7402,7 @@
     "collectionShares": [],
     "inheritedShares": [],
     "subtitles": [],
-    "childBreaksPermissionInheritance": true,
+    "childBreaksPermissionInheritance": false,
     "breaksPermissionInheritance": false,
     "facets": {},
     "fileType": "folder"
