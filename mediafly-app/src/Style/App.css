@@ -173,6 +173,12 @@
   .folder-container {
     justify-content: center;
     grid-template-columns: repeat(1, 300px);
+    align-items: center;
+  }
+
+  .single-folder-container {
+    display: flex;
+    justify-content: center;
   }
 
   .file-page-container {

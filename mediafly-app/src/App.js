@@ -31,7 +31,7 @@ const HomePage = () => {
       <div className="folder-container" id="background">
         {folders.map((folder, index) => {
           return (
-            <div key={index}>
+            <div className ="single-folder-container" key={index}>
               <div className="single-folder">
                 <h1 className="folder-header">{folder.metadata["title"]}</h1>
                 <Link to={`/folder/${index}`}><img className="folder-img" src={folder.thumbnail.url} alt="folder that connects to the item lists" /></Link>
@@ -113,7 +113,7 @@ const ItemPage = ({ match }) => {
     <div id="background">
       <div className="item-button-logo-container">
         <button className="main-button" id="item-buttons"><Link className="main-button-text" to={`/folder/${folderId}`}>Back To Folder</Link></button>
-        <img className="header-logo" src="/logo-saleskit.png" alt="Header logo called SalesKit" />
+        <a href="/"><img className="header-logo" src="/logo-saleskit.png" alt="Header logo called SalesKit" /></a>
         <button className="main-button" id="item-buttons"><Link className="main-button-text" to="/">Back to Homepage</Link></button>
       </div>
       <div className="item-page-header">
