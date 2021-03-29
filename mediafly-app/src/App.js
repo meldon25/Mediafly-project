@@ -10,9 +10,9 @@ export default class App extends React.Component {
     return (
       <>
         <Router>
-          <Route exact path="/folder/:folderId" component={FolderPage} />
-          <Route exact path="/folder/:folderId/items/:itemId" component={ItemPage} />
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/folder/:folderId" component={ FolderPage } />
+          <Route exact path="/folder/:folderId/items/:itemId" component={ ItemPage } />
+          <Route exact path="/" component={ HomePage } />
         </Router>
       </>
 
@@ -29,6 +29,7 @@ const HomePage = () => {
     <Header />
       <div className="folder-container" id="background">
         {folders.map((folder, index) => {
+          {console.log(folder)}
           return (
             <div key={index}>
               <div className="single-folder">
@@ -36,14 +37,13 @@ const HomePage = () => {
                 <Link to={`/folder/${index + 1}`}><img className="folder-img" src={folder.thumbnail.url} /></Link>
                 <div className="item-count-and-folder">
                   <p className="item-count">{"Item Count: " + folder.fileCount}</p>
-                  <button className="folder-button"><Link to={`/folder/${index + 1}`} className="folder-button-text">Open Folder</Link></button>
+                  <button className="main-button"><Link to={`/folder/${index}`} className="main-button-text">Open Folder</Link></button>
                 </div>
               </div>
             </div>
           )
         })}
       </div>
-      {/* <Footer /> */}
     </>
   )
 }
@@ -58,9 +58,11 @@ const FolderPage = ({ match }) => {
 
 
   return (
+    <>
+    <Header />
     <div className="file-page-container" id="background">
       <div className="file-page-header">
-      <h1>Folder Items</h1>
+      <h1>Item Folder</h1>
       <Link className="homepage-link" to="/">Back to Homepage</Link>
       </div>
       {folderItems.map((file, index) => {
@@ -88,8 +90,8 @@ const FolderPage = ({ match }) => {
             </>
       )
     })}
-            {/* <Link to="/">Back to Homepage</Link> */}
           </div>
+          </>
 
         )
 
@@ -106,27 +108,30 @@ const ItemPage = ({ match }) => {
 
       return (
       <div id="background">
+        <div className="item-button-logo-container">
+        <button className="main-button" id="item-buttons"><Link className="main-button-text" to={`/folder/${folderId}`}>Back To Folder</Link></button>
+        <img className="header-logo" src="/logo-saleskit.png" />
+        <button className="main-button" id="item-buttons"><Link className="main-button-text" to="/">Back to Homepage</Link></button>
+        </div>
         {console.log(file)}
         <div className="item-page-header">
         <h1 className="item-header">{file.metadata['title']}</h1>
-        <Link to={`/folder/${folderId}`}>Back To Folder</Link>
-        <Link to="/">Back to Homepage</Link>
+        <div className="item-page-links">
+        {/* <button className="main-button"><Link className="main-button-text" to={`/folder/${folderId}`}>Back To Folder</Link></button>
+        <button className="main-button"><Link className="main-button-text" to="/">Back to Homepage</Link></button> */}
+        </div>
         </div>
         <div className="file-container">
-        <img className="file-img" src={file.thumbnail['url']} width={file.assetImages['width']} height={file.assetImages['height']} ng-if="option=='image'"></img> 
+        <img className="file-img" src={file.thumbnail['url']} ng-if="option=='image'"></img> 
         <div className="file-data-container">
-        <p className="file-data">{"Created Date: " + file.created}</p>
-        <p>{"Modified Date: " + file.modified}</p>
-        <p>{"Modified By: " + file.modifiedBy}</p>
+        <p className="file-data"><strong>{"Created Date: " + file.created}</strong></p>
+        <p><strong>{"Modified Date: " + file.modified}</strong></p>
+        <p><strong>{"Modified By: " + file.modifiedBy}</strong></p>
         </div>
         </div>
         <div className="media-container">
-        <video width="73%" height="auto" className="item-video" controls> <source src={file.asset.url} type="video/mp4" poster={file.previewUrl} ng-if="option=='video'"></source></video>
+        <video className="item-video" controls> <source src={file.asset.url} type="video/mp4" poster={file.previewUrl} ng-if="option=='video'"></source></video>
         </div>
-
-
-        <Link to={`/folder/${folderId}`}>Back To Folder</Link>
-        <Link to="/">Back to Homepage</Link>
       </div>
       )
   }
