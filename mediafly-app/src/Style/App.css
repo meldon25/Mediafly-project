@@ -125,6 +125,7 @@
   width: 100%;
   max-width: 600px;
   height: auto;
+  max-height: 600px;
 }
 
 .file-data-container {
@@ -151,6 +152,7 @@
 .item-video {
   width: 100%;
   height: auto;
+  max-height: 100%;
 }
 
 .item-button-logo-container {
