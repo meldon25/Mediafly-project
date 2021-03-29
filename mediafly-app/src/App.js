@@ -34,7 +34,7 @@ const HomePage = () => {
             <div key={index}>
               <div className="single-folder">
                 <h1 className="folder-header">{folder.metadata["title"]}</h1>
-                <Link to={`/folder/${index + 1}`}><img className="folder-img" src={folder.thumbnail.url} alt="folder that connects to the item lists" /></Link>
+                <Link to={`/folder/${index}`}><img className="folder-img" src={folder.thumbnail.url} alt="folder that connects to the item lists" /></Link>
                 <div className="item-count-and-folder">
                   <p className="item-count">{"Item Count: " + folder.fileCount}</p>
                   <button className="main-button"><Link to={`/folder/${index}`} className="main-button-text">Open Folder</Link></button>

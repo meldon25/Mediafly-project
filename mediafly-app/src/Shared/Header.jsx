@@ -5,7 +5,7 @@ import '../Style/Header.css'
 function Header() {
   return (
     <div className="header-container">
-      <img className="header-logo" src="./logo-saleskit.png" src="../logo-saleskit.png" alt="header logo" />
+      <a href="/"><img className="header-logo" src="./logo-saleskit.png" src="../logo-saleskit.png" alt="header logo" /></a>
     </div>
   )
 }
